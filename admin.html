@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment moderation | Tech Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">Tech Atlas</p>
+          <h1>Comment moderation</h1>
+          <p>Review reader contributions before they appear on the article.</p>
+        </div>
+        <a class="admin-back-link" href="./">Back to article</a>
+      </header>
+
+      <section class="admin-login" aria-labelledby="admin-login-title">
+        <h2 id="admin-login-title">Admin access</h2>
+        <form id="admin-auth-form" class="admin-auth-form">
+          <label for="admin-token">Admin token</label>
+          <input id="admin-token" name="token" type="password" autocomplete="current-password" required />
+          <button class="submit-button" type="submit">Open moderation queue</button>
+        </form>
+        <p id="admin-notice" class="comment-notice" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="moderation-section" class="moderation-section" hidden aria-labelledby="moderation-title">
+        <div class="moderation-heading">
+          <div>
+            <p class="eyebrow">Reader queue</p>
+            <h2 id="moderation-title">Comments</h2>
+          </div>
+          <button id="refresh-comments" class="admin-secondary-button" type="button">Refresh</button>
+        </div>
+        <div id="moderation-list" class="moderation-list"></div>
+      </section>
+    </main>
+    <script type="module" src="./src/admin.ts"></script>
+  </body>
+</html>
