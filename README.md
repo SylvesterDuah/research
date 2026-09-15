@@ -9,9 +9,8 @@ npm install
 npm run dev
 ```
 
-Open the article at `http://localhost:5173`.
+Open the article at `https://zenodo.org/records/22770260` & `https://research-book.netlify.app/`
 
-The like button uses each visitor's browser storage, so this project is fully static and can be deployed directly to Netlify.
 
 ## Netlify
 
