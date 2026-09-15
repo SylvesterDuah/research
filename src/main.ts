@@ -37,21 +37,29 @@ navLinks.forEach((link) => {
 const likeButton = document.querySelector<HTMLButtonElement>('.like-button');
 const likeCount = document.querySelector<HTMLElement>('.like-count');
 
-const fetchJson = async <T>(url: string, options?: RequestInit): Promise<T> => {
-  const response = await fetch(url, {
-    headers: { 'Content-Type': 'application/json' },
-    ...options,
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(errorText || 'Request failed');
-  }
-
-  return (await response.json()) as T;
-};
-
 if (likeButton && likeCount) {
+  const likeStorageKey = 'research-blog-like-state';
+  const defaultLikeState = { liked: false, likes: 128 };
+
+  const readLikeState = (): { liked: boolean; likes: number } => {
+    try {
+      const saved = localStorage.getItem(likeStorageKey);
+      if (!saved) return defaultLikeState;
+
+      const parsed = JSON.parse(saved) as Partial<typeof defaultLikeState>;
+      return {
+        liked: Boolean(parsed.liked),
+        likes: Number.isFinite(parsed.likes) ? Number(parsed.likes) : defaultLikeState.likes,
+      };
+    } catch {
+      return defaultLikeState;
+    }
+  };
+
+  const saveLikeState = (state: { liked: boolean; likes: number }): void => {
+    localStorage.setItem(likeStorageKey, JSON.stringify(state));
+  };
+
   const syncLikeButton = (liked: boolean, count: number) => {
     likeButton.classList.toggle('liked', liked);
     likeButton.setAttribute('aria-pressed', String(liked));
@@ -62,26 +70,16 @@ if (likeButton && likeCount) {
     likeCount.textContent = String(count);
   };
 
-  const loadLikeState = async () => {
-    try {
-      const state = await fetchJson<{ liked: boolean; likes: number }>('/api/likes');
-      syncLikeButton(state.liked, state.likes);
-    } catch (error) {
-      console.error('Failed to load likes', error);
-    }
-  };
+  const initialState = readLikeState();
+  syncLikeButton(initialState.liked, initialState.likes);
 
-  likeButton.addEventListener('click', async () => {
-    try {
-      const state = await fetchJson<{ liked: boolean; likes: number }>('/api/likes/toggle', {
-        method: 'POST',
-        body: JSON.stringify({}),
-      });
-      syncLikeButton(state.liked, state.likes);
-    } catch (error) {
-      console.error('Failed to toggle like', error);
-    }
+  likeButton.addEventListener('click', () => {
+    const currentState = readLikeState();
+    const nextState = {
+      liked: !currentState.liked,
+      likes: currentState.liked ? Math.max(0, currentState.likes - 1) : currentState.likes + 1,
+    };
+    saveLikeState(nextState);
+    syncLikeButton(nextState.liked, nextState.likes);
   });
-
-  void loadLikeState();
 }

@@ -6,9 +6,14 @@ A responsive research blog exploring technology, artificial intelligence, and fa
 
 ```bash
 npm install
-ADMIN_TOKEN=change-me-in-production npm run dev
+npm run dev
 ```
 
-Open the article at `http://localhost:5173` and the moderation dashboard at `http://localhost:5173/admin.html`.
+Open the article at `http://localhost:5173`.
 
-The backend stores likes and moderation data in SQLite under `data/blog.sqlite`.
+The like button uses each visitor's browser storage, so this project is fully static and can be deployed directly to Netlify.
+
+## Netlify
+
+- Build command: `npm run build`
+- Publish directory: `dist`
