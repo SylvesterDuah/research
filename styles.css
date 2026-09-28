@@ -93,6 +93,36 @@ img {
   opacity: 0.9;
 }
 
+.volume-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.top-nav .volume-switch a {
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.top-nav .volume-switch a[aria-current="page"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.top-nav .volume-switch a:not([aria-current="page"]):hover {
+  color: var(--accent);
+}
+
 .top-nav a:hover,
 .topic-list a:hover,
 .side-note a:hover,

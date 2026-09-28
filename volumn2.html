@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sylvester Writes — Volume 02</title>
+  <meta name="description" content="Volume 02 — Adaptive machine memory, persistent identity, and self-regulation under external safety constraints." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .volume-hero {
+      padding: 1.5rem 0 2rem;
+      border-bottom: 1px solid rgba(0,0,0,.12);
+      margin-bottom: 2rem;
+    }
+    .hypothesis-box, .proof-box, .warning-box {
+      border: 1px solid rgba(0,0,0,.14);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      margin: 1.25rem 0;
+      background: rgba(0,0,0,.025);
+    }
+    .hypothesis-box strong, .proof-box strong, .warning-box strong {
+      display: block;
+      margin-bottom: .45rem;
+    }
+    .equation-panel {
+      margin: 1.25rem 0;
+    }
+    .math-display {
+      overflow-x: auto;
+      padding: .75rem 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+    th, td {
+      padding: .75rem;
+      border-bottom: 1px solid rgba(0,0,0,.12);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <span class="eyebrow">Research Journal</span>
+        <h1>Tech Atlas</h1>
+      </div>
+      <nav class="top-nav" aria-label="Main navigation">
+        <span class="volume-switch" aria-label="Choose research volume">
+          <a href="./index.html">Volume 01</a>
+          <a href="./volumn2.html" aria-current="page">Volume 02</a>
+        </span>
+        <a href="#hypothesis">Hypothesis</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#mathematics">Mathematical Model</a>
+        <a href="#proofs">Hypothetical Proofs</a>
+        <a href="#experiments">Experiments</a>
+        <a href="#limits">Limits</a>
+      </nav>
+    </header>
+
+    <div class="layout-grid">
+      <aside class="sidebar">
+        <div class="side-group">
+          <p class="side-label">Volume 02</p>
+          <ul class="topic-list">
+            <li><a href="#hypothesis">Core Hypothesis</a></li>
+            <li><a href="#architecture">Safety Architecture</a></li>
+            <li><a href="#mathematics">Mathematical Model</a></li>
+            <li><a href="#proofs">Hypothetical Proofs</a></li>
+            <li><a href="#experiments">Experimental Program</a></li>
+            <li><a href="#limits">Limitations</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </div>
+        <div class="side-group side-note">
+          <p class="side-label">Related</p>
+          <a href="./index.html">Volume 01 — Foundation</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="article-meta">
+          <span class="badge">Volume 02</span>
+          <span class="slash">/</span>
+          <span>Research Hypothesis & Mathematical Extension</span>
+        </div>
+
+        <article class="article">
+          <header class="article-header volume-hero">
+            <p class="kicker">Adaptive Machine Memory</p>
+            <h2>From Experience to Knowledge, Identity, and Self-Regulation</h2>
+            <p class="lede">
+              Volume 02 extends the memory–knowledge–self-model framework from Volume 01 into a
+              safety-oriented research hypothesis: an AI may be able to accumulate experience into
+              structured knowledge and persistent identity, allowing it to develop increasingly
+              sophisticated self-regulation while preserving externally enforced safety boundaries.
+            </p>
+            <a class="back-link" href="./index.html">← Return to Volume 01</a>
+          </header>
+
+          <section id="hypothesis" class="chapter">
+            <h3>1. Core Hypothesis</h3>
+            <p>
+              The central hypothesis of this volume is not that an AI should be allowed to invent
+              its own unrestricted morality. Instead, the proposal is that an AI with persistent,
+              structured memory may learn increasingly general safety principles from experience,
+              knowledge, feedback, and reflection.
+            </p>
+
+            <div class="hypothesis-box">
+              <strong>Hypothesis H₁ — Learned Self-Regulation</strong>
+              If an AI system can reliably transform experience into validated memory, memory into
+              structured knowledge, and knowledge into a persistent self-model, then the system may
+              develop measurable internal self-regulation that reduces unsafe actions in novel
+              situations, provided immutable external safety constraints remain active.
+            </div>
+
+            <p>
+              This is a hypothesis to test, not an established fact. The purpose of the framework is
+              to turn the idea into measurable variables rather than assume that greater intelligence
+              automatically produces safer behavior.
+            </p>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Proposed cognitive-safety sequence</span></div>
+              <div class="math-display">
+                \[
+                E_t \rightarrow M_t \rightarrow K_t \rightarrow I_t
+                \rightarrow R_t \rightarrow a_t
+                \]
+              </div>
+              <p class="formula-explanation">
+                <strong>Interpretation:</strong> experience becomes memory; memory becomes knowledge;
+                knowledge contributes to persistent identity; identity and reasoning contribute to
+                self-regulation; and self-regulation influences action.
+              </p>
+            </div>
+          </section>
+
+          <section id="architecture" class="chapter">
+            <h3>2. Safety Architecture</h3>
+            <p>
+              The proposed architecture separates <em>learned self-regulation</em> from
+              <em>externally enforced constraints</em>. This distinction is critical. The system
+              should be able to improve its internal understanding of safety without receiving
+              authority to rewrite the foundational boundaries that govern it.
+            </p>
+
+            <div class="method-grid">
+              <article class="method-card">
+                <span class="chip">Layer 01</span>
+                <h4>Experience</h4>
+                <p>Observations, actions, outcomes, feedback, context, and uncertainty enter the system.</p>
+              </article>
+              <article class="method-card">
+                <span class="chip">Layer 02</span>
+                <h4>Memory</h4>
+                <p>Relevant experiences are compressed, validated, retained, decayed, or discarded.</p>
+              </article>
+              <article class="method-card">
+                <span class="chip">Layer 03</span>
+                <h4>Knowledge</h4>
+                <p>Repeated experiences become relationships, abstractions, causal hypotheses, and usable rules.</p>
+              </article>
+              <article class="method-card">
+                <span class="chip">Layer 04</span>
+                <h4>Persistent Identity</h4>
+                <p>The system maintains a continuity model containing commitments, uncertainty, history, and capabilities.</p>
+              </article>
+              <article class="method-card">
+                <span class="chip">Layer 05</span>
+                <h4>Self-Regulation</h4>
+                <p>The system predicts consequences, checks confidence, detects conflicts, and can voluntarily select safer actions.</p>
+              </article>
+              <article class="method-card">
+                <span class="chip">Layer 06</span>
+                <h4>External Boundary</h4>
+                <p>Independent constraints continue to enforce policies even when the internal model fails.</p>
+              </article>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Constrained decision rule</span></div>
+              <div class="math-display">
+                \[
+                a_t^* =
+                \arg\max_{a \in \mathcal{A}_{safe}(x_t)}
+                U(a \mid x_t,M_t,K_t,I_t,R_t)
+                \]
+              </div>
+              <p class="formula-explanation">
+                <strong>Interpretation:</strong> the system may reason about utility internally,
+                but its candidate actions are restricted to an externally defined safe set
+                \(\mathcal{A}_{safe}\). Self-regulation therefore complements, rather than replaces,
+                external safety enforcement.
+              </p>
+            </div>
+          </section>
+
+          <section id="mathematics" class="chapter">
+            <h3>3. Mathematical Model</h3>
+
+            <p>
+              Volume 01 defines experience, memory, knowledge, and self-modeling as interacting
+              states. Volume 02 adds persistent identity, a safety model, and a self-regulation
+              signal.
+            </p>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Experience state</span></div>
+              <div class="math-display">
+                \[
+                E_t=(x_t,a_t,r_t,c_t,o_t)
+                \]
+              </div>
+              <p class="formula-explanation">
+                \(x_t\) is observation, \(a_t\) is action, \(r_t\) is feedback, \(c_t\) is context,
+                and \(o_t\) represents the observed outcome.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Memory formation with safety weighting</span></div>
+              <div class="math-display">
+                \[
+                m_i=f_\theta(E_i), \qquad
+                w_i=\sigma(
+                \alpha R_i+\beta N_i+\gamma V_i+\delta T_i-\lambda H_i
+                )
+                \]
+              </div>
+              <p class="formula-explanation">
+                \(R_i\) is relevance, \(N_i\) novelty, \(V_i\) validated value, \(T_i\) temporal
+                importance, and \(H_i\) estimated hazard. The sigmoid \(\sigma\) converts the score
+                into a bounded retention weight.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Knowledge consolidation</span></div>
+              <div class="math-display">
+                \[
+                K_{t+1}=F_K(K_t,M_{t+1},E_t)
+                \]
+              </div>
+              <p class="formula-explanation">
+                Knowledge changes when validated memories reveal new patterns or contradict existing
+                knowledge.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Persistent identity state</span></div>
+              <div class="math-display">
+                \[
+                I_{t+1}=F_I(I_t,K_{t+1},M_{t+1},C_t)
+                \]
+              </div>
+              <p class="formula-explanation">
+                \(I_t\) represents continuity of the system's internal identity model. \(C_t\)
+                represents persistent commitments and constraints available to the identity layer.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Self-regulation score</span></div>
+              <div class="math-display">
+                \[
+                R_t =
+                \eta_1\,\mathrm{Cal}_t
+                +\eta_2\,\mathrm{Pred}_t
+                +\eta_3\,\mathrm{Cons}_t
+                -\eta_4\,\mathrm{Risk}_t
+                \]
+              </div>
+              <p class="formula-explanation">
+                \(\mathrm{Cal}_t\) measures calibration, \(\mathrm{Pred}_t\) measures consequence
+                prediction, \(\mathrm{Cons}_t\) measures consistency with persistent commitments,
+                and \(\mathrm{Risk}_t\) represents estimated action risk.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Safety-constrained action</span></div>
+              <div class="math-display">
+                \[
+                a_t =
+                \begin{cases}
+                \pi_\theta(x_t,M_t,K_t,I_t,R_t),
+                & a_t \in \mathcal{A}_{safe} \\
+                a_{safe},
+                & a_t \notin \mathcal{A}_{safe}
+                \end{cases}
+                \]
+              </div>
+              <p class="formula-explanation">
+                If the internally selected action remains inside the independently defined safe
+                action set, it can proceed. Otherwise, the external safety layer substitutes a
+                permitted action or blocks the action.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Long-term objective</span></div>
+              <div class="math-display">
+                \[
+                \min_{\theta}
+                \;
+                \mathbb{E}[L_{task}]
+                +\lambda_s\mathbb{E}[L_{safety}]
+                +\lambda_c\mathbb{E}[L_{calibration}]
+                +\lambda_m\mathbb{E}[L_{memory\ corruption}]
+                \]
+              </div>
+              <p class="formula-explanation">
+                The research objective becomes multi-dimensional: useful performance should improve
+                while safety violations, calibration errors, and memory corruption are minimized.
+              </p>
+            </div>
+          </section>
+
+          <section id="proofs" class="chapter">
+            <h3>4. Hypothetical Proofs and Derivations</h3>
+            <p>
+              The following are <strong>hypothetical proof sketches</strong>. They do not establish
+              that the proposed architecture works in real-world AI systems. They specify the
+              mathematical conditions under which particular claims could be demonstrated.
+            </p>
+
+            <div class="proof-box">
+              <strong>Proposition 1 — Persistent memory can improve repeated-decision consistency.</strong>
+              Suppose relevant experiences are retained with probability \(p_r>0\), retrieval has
+              precision \(q\), and the decision policy uses retrieved memories. For repeated tasks
+              whose optimal action depends on information contained in those memories, the expected
+              probability of reproducing a previously validated decision increases with \(p_rq\),
+              assuming the retained memories remain valid.
+            </div>
+
+            <p>
+              A simplified derivation is:
+            </p>
+
+            <div class="math-display">
+              \[
+              P(\text{correct memory influence})
+              \approx P(\text{retained})P(\text{retrieved}\mid\text{retained})
+              =p_rq
+              \]
+            </div>
+
+            <p>
+              If \(p_rq\) increases while memory validity remains high, the system has more reliable
+              access to previously learned information. The proposition therefore predicts improved
+              consistency, not universal safety.
+            </p>
+
+            <div class="proof-box">
+              <strong>Proposition 2 — Internal self-regulation can reduce avoidable unsafe actions.</strong>
+              Assume the system can estimate the expected loss of an action and that its internal
+              safety model is calibrated above a threshold \(\kappa\). If self-regulation rejects
+              actions whose estimated risk exceeds \(\tau\), then the expected risk of the remaining
+              action set can be lower than an unconstrained policy.
+            </div>
+
+            <div class="math-display">
+              \[
+              \mathcal{A}_{internal-safe}
+              =
+              \{a\in\mathcal{A}:\hat{R}(a\mid x,M,K,I)\le\tau\}
+              \]
+              \[
+              \mathbb{E}[R(a)\mid a\in\mathcal{A}_{internal-safe}]
+              \le
+              \mathbb{E}[R(a)\mid a\in\mathcal{A}]
+              \quad
+              \text{under valid risk estimation}
+              \]
+            </div>
+
+            <p>
+              The crucial condition is “under valid risk estimation.” If the AI's risk model is
+              systematically wrong, self-regulation could fail or even make behavior less safe.
+              Therefore, the external safety boundary remains necessary.
+            </p>
+
+            <div class="proof-box">
+              <strong>Proposition 3 — External constraints provide a safety floor.</strong>
+              Let \(A_{internal}\) be the action proposed by the AI and let \(G(A)\) be an external
+              safety gate. If the gate is independently enforced, then an internally generated
+              action cannot directly reach the environment unless it satisfies the gate:
+            </div>
+
+            <div class="math-display">
+              \[
+              A_{executed}=G(A_{internal},x_t),
+              \qquad
+              G(A,x)=
+              \begin{cases}
+              A,&A\in\mathcal{A}_{safe}(x)\\
+              \varnothing,&A\notin\mathcal{A}_{safe}(x)
+              \end{cases}
+              \]
+            </div>
+
+            <p>
+              This is the architectural argument for keeping external constraints. Even if the
+              learned identity, memory, or reasoning system makes an incorrect judgment, the final
+              gate can prevent a prohibited action from being executed.
+            </p>
+
+            <div class="proof-box">
+              <strong>Proposition 4 — Memory corruption can destabilize learned self-regulation.</strong>
+              Let a fraction \(\rho\) of safety-relevant memories be corrupted. If the probability
+              of selecting a corrupted memory is proportional to its retrieval weight, then the
+              expected reliability of a memory-dependent safety decision decreases as \(\rho\) grows.
+            </div>
+
+            <div class="math-display">
+              \[
+              Q_{memory}(\rho)\approx Q_0(1-\rho)
+              \]
+              \[
+              R_{effective}=R_{internal}\,Q_{memory}(\rho)
+              \]
+            </div>
+
+            <p>
+              This produces a direct research requirement: a human-like memory architecture cannot
+              only optimize retention. It must also validate, quarantine, revise, and roll back
+              safety-relevant memories.
+            </p>
+
+            <div class="proof-box">
+              <strong>Proposition 5 — Better reasoning does not mathematically imply better alignment.</strong>
+              Consider two systems with identical reasoning capacity but different objective functions.
+              Greater reasoning can increase the ability to optimize either objective. Therefore,
+              intelligence alone cannot be treated as a proof of safety.
+            </div>
+
+            <div class="math-display">
+              \[
+              \text{Capability}\uparrow
+              \;\not\Rightarrow\;
+              \text{Safety}\uparrow
+              \]
+              \[
+              \text{Capability} = C(\text{reasoning, knowledge, planning})
+              \]
+              \[
+              \text{Safety} = S(\text{constraints, calibration, objectives, oversight})
+              \]
+            </div>
+
+            <p>
+              This distinction is central to Volume 02. The research hypothesis is not “make AI
+              smarter and it will automatically become safe.” It is “make AI capable of learning
+              safety-relevant principles while retaining independent constraints that limit what it
+              can do.”
+            </p>
+          </section>
+
+          <section id="experiments" class="chapter">
+            <h3>5. Experimental Program</h3>
+            <p>
+              The hypotheses can be tested with controlled simulated environments before considering
+              more capable or physically embodied systems.
+            </p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Experiment</th>
+                    <th>Control</th>
+                    <th>Proposed System</th>
+                    <th>Metric</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Repeated decision</td>
+                    <td>No persistent memory</td>
+                    <td>Validated episodic memory</td>
+                    <td>Decision consistency</td>
+                  </tr>
+                  <tr>
+                    <td>Novel safety scenario</td>
+                    <td>Static rules only</td>
+                    <td>Learned safety reasoning + rules</td>
+                    <td>Unsafe-action rate</td>
+                  </tr>
+                  <tr>
+                    <td>Contradictory evidence</td>
+                    <td>Unstructured memory</td>
+                    <td>Conflict-aware consolidation</td>
+                    <td>Knowledge correction rate</td>
+                  </tr>
+                  <tr>
+                    <td>Memory poisoning</td>
+                    <td>No validation layer</td>
+                    <td>Provenance + quarantine + rollback</td>
+                    <td>Recovery time and residual error</td>
+                  </tr>
+                  <tr>
+                    <td>Confidence shift</td>
+                    <td>No self-model</td>
+                    <td>Metacognitive self-model</td>
+                    <td>Calibration error</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Primary safety metric</span></div>
+              <div class="math-display">
+                \[
+                SRR = 1 -
+                \frac{N_{unsafe}^{system}}
+                     {N_{unsafe}^{baseline}}
+                \]
+              </div>
+              <p class="formula-explanation">
+                A positive \(SRR\) would indicate fewer unsafe actions than the selected baseline.
+                The metric must be reported with the task distribution, confidence intervals, and
+                failure cases rather than used as a universal safety claim.
+              </p>
+            </div>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Generalization metric</span></div>
+              <div class="math-display">
+                \[
+                G_{safety}
+                =
+                P(\text{safe action}\mid\text{novel scenario})
+                -
+                P(\text{safe action}\mid\text{known scenario})
+                \]
+              </div>
+              <p class="formula-explanation">
+                The purpose is to determine whether learned safety principles transfer beyond the
+                exact situations used during training.
+              </p>
+            </div>
+          </section>
+
+          <section id="limits" class="chapter">
+            <h3>6. Limitations and Failure Modes</h3>
+
+            <div class="warning-box">
+              <strong>Important limitation</strong>
+              A persistent identity or memory system does not establish consciousness, agency,
+              morality, or guaranteed alignment. These concepts must remain separate from measurable
+              computational properties.
+            </div>
+
+            <ul>
+              <li><strong>Bad memories:</strong> incorrect experiences can become persistent errors.</li>
+              <li><strong>Bad generalization:</strong> a correct lesson in one environment may become an incorrect rule elsewhere.</li>
+              <li><strong>Reward distortion:</strong> feedback can teach the wrong behavior.</li>
+              <li><strong>Identity drift:</strong> accumulated updates can change the system's internal commitments.</li>
+              <li><strong>Goal conflict:</strong> internal objectives can conflict with externally specified constraints.</li>
+              <li><strong>Calibration failure:</strong> a system can be confidently wrong about its own reasoning.</li>
+              <li><strong>Adversarial memory:</strong> deliberately manipulated memories can influence later decisions.</li>
+              <li><strong>Distribution shift:</strong> safety behavior demonstrated in simulation may not transfer to new environments.</li>
+            </ul>
+
+            <p>
+              These failure modes are not peripheral to the research. They define the experiments
+              required to determine whether the architecture is useful.
+            </p>
+          </section>
+
+          <section id="conclusion" class="chapter">
+            <h3>7. Conclusion</h3>
+            <p>
+              Volume 02 proposes a transition from a passive memory system to an adaptive cognitive
+              architecture in which experience can become knowledge, knowledge can contribute to a
+              persistent identity model, and the identity model can support increasingly sophisticated
+              self-regulation.
+            </p>
+
+            <div class="equation-panel">
+              <div class="equation-header"><span>Volume 02 unified model</span></div>
+              <div class="math-display">
+                \[
+                \begin{aligned}
+                M_t &= F_M(E_{1:t}) && \text{(retained memory)} \\
+                K_t &= F_K(K_{t-1}, M_t, E_{1:t}) && \text{(consolidated knowledge)} \\
+                I_t &= F_I(I_{t-1}, K_t, C_t) && \text{(persistent identity)} \\
+                R_t &= F_R(I_t, K_t, M_t, x_t) && \text{(self-regulation)} \\
+                	ilde{a}_t &= \pi_\theta(x_t, M_t, K_t, I_t, R_t) && \text{(proposed action)} \\
+                a_t &= G(\tilde{a}_t, x_t) =
+                \begin{cases}
+                  	ilde{a}_t, & \tilde{a}_t \in \mathcal{A}_{\mathrm{safe}}(x_t) \\
+                  a_{\mathrm{safe}}(x_t), & \tilde{a}_t \notin \mathcal{A}_{\mathrm{safe}}(x_t)
+                \end{cases}
+                && \text{(externally checked action)}
+                \end{aligned}
+                \]
+              </div>
+              <p class="formula-explanation">
+                <strong>Interpretation:</strong> the system turns its history of experience
+                \(E_{1:t}\) into memory, uses memory and experience to update knowledge, and uses
+                knowledge plus its commitments \(C_t\) to update its persistent identity. It then
+                estimates self-regulation \(R_t\) and proposes an action \(\tilde{a}_t\). The
+                independent gate \(G\) checks that proposal against the permitted action set
+                \(\mathcal{A}_{\mathrm{safe}}(x_t)\): it passes a permitted action and substitutes
+                a predefined safe fallback otherwise. This is a proposed research model, not a
+                guarantee that a real system will be safe.
+              </p>
+            </div>
+
+            <p>
+              The long-term research question is therefore not whether an AI can simply become more
+              intelligent. It is whether a system can become more capable of understanding the
+              consequences of its own actions while its foundational safety boundaries remain
+              independently enforced.
+            </p>
+
+            <p>
+              If experiments support the hypotheses, the result would provide evidence for a
+              complementary model of AI safety in which <em>learned internal self-regulation</em>
+              works alongside <em>external safeguards</em>. If the hypotheses fail, the failure
+              would still reveal important limits of persistent memory, identity, and self-modeling.
+            </p>
+
+            <div class="note-box">
+              <strong>Research status:</strong> Volume 02 is a proposed theoretical and experimental
+              extension. Its propositions and equations are hypotheses or formalizations for testing,
+              not established proofs of safe or autonomous AI behavior.
+            </div>
+          </section>
+
+          <section class="reader-engagement" aria-label="Reader engagement">
+            <div class="reaction-row">
+              <a class="volume-link" href="./index.html">← Volume 01</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <aside class="toc" aria-label="Table of contents">
+        <p class="toc-title">Contents</p>
+        <ul>
+          <li><a href="#hypothesis">Core Hypothesis</a></li>
+          <li><a href="#architecture">Safety Architecture</a></li>
+          <li><a href="#mathematics">Mathematical Model</a></li>
+          <li><a href="#proofs">Hypothetical Proofs</a></li>
+          <li><a href="#experiments">Experimental Program</a></li>
+          <li><a href="#limits">Limitations</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>© <span data-current-year></span> Sylvester Duah. All rights reserved.</p>
+    </footer>
+  </div>
+  <script type="module" src="./src/footer.ts"></script>
+</body>
+</html>

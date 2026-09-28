@@ -28,6 +28,10 @@
           <h1>Tech Atlas</h1>
         </div>
         <nav class="top-nav" aria-label="Main navigation">
+          <span class="volume-switch" aria-label="Choose research volume">
+            <a href="./index.html" aria-current="page">Volume 01</a>
+            <a href="./volumn2.html">Volume 02</a>
+          </span>
           <a href="#overview">Overview</a>
           <a href="#methods">Methods</a>
           <a href="#research-areas">Research Areas</a>
@@ -696,10 +700,11 @@
       </div>
 
       <footer class="site-footer">
-        <p>© 2026 Sylvester Duah. All rights reserved.</p>
+        <p>© <span data-current-year></span> Sylvester Duah. All rights reserved.</p>
       </footer>
     </div>
 
     <script type="module" src="./src/main.ts"></script>
+    <script type="module" src="./src/footer.ts"></script>
   </body>
 </html>
